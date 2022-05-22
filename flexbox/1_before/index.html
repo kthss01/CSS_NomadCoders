@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>(S)CSS MaterClass</title>
+    </head>
+    <style>
+        .box {
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 2px;
+            color: white;
+
+            display: inline-block;
+            /* display: inline; */
+        }
+
+        /* flexbox 쓰기전 일일히 수치로 넣어줌 */
+
+        /* 가운데 두고 싶음 */
+        .box:nth-child(2) {
+            margin-left: 35px;
+        }
+
+        /* 마지막 박스 오른쪽 끝에 두고 싶어서 */
+        .box:nth-child(3) {
+            margin-left: 20px;
+        }
+    </style>
+    <body>
+        <script>
+            /* 
+                block
+                inline
+                inline-block
+            */
+        </script>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </body>
+</html>
