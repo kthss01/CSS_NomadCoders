@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>(S)CSS MaterClass</title>
+    </head>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .father {
+            display: flex;
+
+            /* 수평축에서 움직이는 법 */
+            /* Main Axis */
+            justify-content: space-around;
+
+            width: 100%;
+            /* children에 적용하고 싶으면 height를 줘야함 */
+            height: 50vh;
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: peru;
+            color: white;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child:nth-child(2) {
+            background: #000;
+            flex-shrink: 1; /* default */
+            flex-shrink: 2;
+            flex-shrink: 4;
+        }
+
+        .child:nth-child(3) {
+            flex-shrink: 2;
+        }
+
+        .child2 {
+            width: 50px;
+            height: 200px;
+            background-color: purple;
+            color: white;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child2:nth-child(2) {
+            background: gray;
+            flex-grow: 0; /* default */
+            flex-grow: 2;
+        }
+
+        .child2:nth-child(3) {
+            flex-grow: 1;
+        }
+    </style>
+    <body>
+        <script>
+            /* 
+                flex-direciton: row (가로) 일땐 (column이면 반데)
+                    main-axis : 수평 (horizon)
+                        justify-content 로 item 움직임
+                    cross-axis : 수직 (vertical)   
+                        align-items 로 item 움직임
+            */
+        </script>
+        <div class="father">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
+        </div>
+
+        <div class="father">
+            <div class="child2">1</div>
+            <div class="child2">2</div>
+            <div class="child2">3</div>
+        </div>
+    </body>
+</html>

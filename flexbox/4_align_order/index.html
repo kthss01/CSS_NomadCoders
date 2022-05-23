@@ -7,28 +7,42 @@
         <title>(S)CSS MaterClass</title>
     </head>
     <style>
-        .wrapper {
+        .father {
             display: flex;
-            flex-direction: row; /* default */
             flex-direction: column;
+
             /* 수평축에서 움직이는 법 */
             /* Main Axis */
-            justify-content: center;
-            justify-content: space-between;
             justify-content: space-around;
 
-            /* Cross Axis */
-            align-items: center; /* 높이가 box랑 같음 이 error 많이 함 */
-            align-items: flex-end; /* 높이가 box랑 같음 이 error 많이 함 */
-            align-items: flex-start; /* 높이가 box랑 같음 이 error 많이 함 */
+            /* children에 적용하고 싶으면 height를 줘야함 */
             height: 100vh;
         }
 
-        .box {
+        .child {
             width: 100px;
             height: 100px;
             background-color: peru;
             color: white;
+            font-size: 50px;
+        }
+
+        .child:nth-child(2) {
+            /* cross axis에 적용 = align-item처럼 해동 */
+            align-self: center;
+        }
+
+        .child:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        /* 마지막 박스 1번째 (0번째부터 시작) */
+        .child:nth-child(2) {
+            order: 1;
+        }
+
+        .child:nth-child(1) {
+            order: 2;
         }
     </style>
     <body>
@@ -41,10 +55,10 @@
                         align-items 로 item 움직임
             */
         </script>
-        <div class="wrapper">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
+        <div class="father">
+            <div class="child">1</div>
+            <div class="child">2</div>
+            <div class="child">3</div>
         </div>
     </body>
 </html>
