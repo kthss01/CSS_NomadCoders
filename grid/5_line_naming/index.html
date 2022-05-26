@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>(S)CSS MaterClass</title>
+    </head>
+    <style>
+        .grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: [first-line] 100px [second-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line] 100px;
+            grid-template-rows: repeat(4, 100px [sexy-line]);
+        }
+        .header {
+            background-color: #2ecc71;
+            grid-column: span 4;
+        }
+        .content {
+            background-color: #3498db;
+            grid-column: first-line / fourth-line;
+            grid-row: sexy-line 1 / sexy-line 3;
+        }
+        .nav {
+            background-color: #8e44ad;
+            grid-row: span 2;
+        }
+        .footer {
+            background-color: #f39c12;
+            grid-column: span 4;
+        }
+    </style>
+    <body>
+        <div class="grid">
+            <div class="header"></div>
+            <div class="content"></div>
+            <div class="nav"></div>
+            <div class="footer"></div>
+        </div>
+    </body>
+</html>

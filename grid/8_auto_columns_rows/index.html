@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>(S)CSS MaterClass</title>
+    </head>
+    <style>
+        .grid {
+            display: grid;
+            color: #fff;
+            gap: 5px;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+
+            /* 이미 정해진거 이후 자동으로 정해짐 */
+            /* grid-auto-rows: 350px; */
+            /* 그냥 grid-auto-rows 50px 이렇게만 줘버려도 됨 */
+
+            /* 넘어가는건 default로 rows로 생성됨 */
+            grid-auto-flow: column;
+            /* row 대신 column을 자동으로 만듬 */
+            /* flow column일 때 grid-auto-columns 사용 */
+            grid-auto-columns: 100px;
+        }
+        .item:nth-child(odd) {
+            background-color: #2ecc71;
+        }
+        .item:nth-child(even) {
+            background-color: #3498db;
+        }
+    </style>
+    <body>
+        <div class="grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+            <div class="item">16</div>
+            <div class="item">17</div>
+            <div class="item">18</div>
+            <div class="item">19</div>
+            <div class="item">20</div>
+            <div class="item">21</div>
+            <div class="item">22</div>
+            <div class="item">23</div>
+            <div class="item">24</div>
+            <div class="item">25</div>
+            <div class="item">26</div>
+            <div class="item">27</div>
+            <div class="item">28</div>
+            <div class="item">29</div>
+            <div class="item">30</div>
+            <div class="item">31</div>
+            <div class="item">32</div>
+            <div class="item">33</div>
+            <div class="item">34</div>
+            <div class="item">35</div>
+            <div class="item">36</div>
+            <div class="item">37</div>
+            <div class="item">38</div>
+            <div class="item">39</div>
+            <div class="item">40</div>
+            <div class="item">41</div>
+            <div class="item">42</div>
+            <div class="item">43</div>
+            <div class="item">44</div>
+            <div class="item">45</div>
+            <div class="item">46</div>
+            <div class="item">47</div>
+            <div class="item">48</div>
+            <div class="item">49</div>
+            <div class="item">50</div>
+        </div>
+    </body>
+</html>

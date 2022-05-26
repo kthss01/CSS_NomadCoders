@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>(S)CSS MaterClass</title>
+    </head>
+    <style>
+        .grid {
+            display: grid;
+            gap: 5px;
+            height: 50vh; /* my screen 1/4 의미 */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            /* horizontal 수평 가로 */
+            justify-items: start;
+            justify-items: center;
+            justify-items: end;
+            justify-items: stretch; /* default */
+
+            /* vertical 수직 세로 */
+            align-items: stretch; /* default */
+            align-items: end;
+            align-items: center;
+            align-items: start;
+
+            /* place items */
+            place-items: stretch center; /* vertical horizontal */
+        }
+        .header {
+            background-color: #2ecc71;
+            width: 40px;
+            height: 40px;
+        }
+        .content {
+            background-color: #3498db;
+            width: 40px;
+            height: 40px;
+        }
+        .nav {
+            background-color: #8e44ad;
+            width: 40px;
+            height: 40px;
+        }
+        .footer {
+            background-color: #f39c12;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+    <body>
+        <div class="grid">
+            <div class="header">header</div>
+            <div class="content">content</div>
+            <div class="nav">nav</div>
+            <div class="footer">footer</div>
+        </div>
+    </body>
+</html>

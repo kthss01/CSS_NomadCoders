@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>(S)CSS MaterClass</title>
+    </head>
+    <style>
+        .grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(4, 100px);
+        }
+        .header {
+            background-color: #2ecc71;
+            grid-column: 1 / 5; /* start end 같이 */
+            grid-column: 1 / -1;
+            grid-column: span; /* 이렇게만써도 되는거 같은데 이전께 먹혀서 그런가봄 참고 */
+        }
+        .content {
+            background-color: #3498db;
+            grid-column: 1 / 4;
+            grid-column: 1 / -2;
+            grid-row: 2 / 4;
+            grid-row: span 2; /* 이러면 다른데 시작점 있어서 밀림 */
+            grid-row: 2 / span 2;
+            grid-row: span 2; /* 둘다 같은 시작점으로 안쓰면 됨 */
+        }
+        .nav {
+            background-color: #8e44ad;
+            grid-row: 2 / 4;
+            grid-row: span 2;
+        }
+        .footer {
+            background-color: #f39c12;
+            grid-column: 1 / 5;
+            grid-column: 1 / -2; /* 이렇게도 가능 */
+            grid-column: 1 / -1; /* 시작부터 끝이라는 뜻 */
+            grid-column: span 4; /* 시작부터 끝이란 의미 */
+        }
+    </style>
+    <body>
+        <div class="grid">
+            <div class="header"></div>
+            <div class="content"></div>
+            <div class="nav"></div>
+            <div class="footer"></div>
+        </div>
+    </body>
+</html>
