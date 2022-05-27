@@ -1,0 +1,47 @@
+@import "variables";
+
+body {
+    background: $bg;
+    a {
+        color: blue;
+    }
+}
+
+h2 {
+    color: blue;
+    font-size: $title;
+}
+
+.box {
+    margin-top: 20px;
+
+    /* nesting */
+    h2 {
+        color: white;
+        &:hover {
+            color: yellow;
+        }
+    }
+    button {
+        background-color: green;
+    }
+    &:hover {
+        background-color: orange;
+    }
+}
+
+/*
+.box h2 {
+    color: white;
+}
+
+.box button {
+    background-color: green;
+}
+*/
+
+/* 
+.box:hover {
+    background-color: orange;
+}
+*/
